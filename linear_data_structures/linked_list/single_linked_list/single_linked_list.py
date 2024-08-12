@@ -1,4 +1,4 @@
-from ..list_node import ListNode
+from list_node import ListNode
 
 
 class SingleLinkedList:
@@ -8,10 +8,24 @@ class SingleLinkedList:
         self.size = 0
 
     def insert_at_beginning(self, value: any) -> None:
-        pass
+        if self.head is None:
+            self.head = ListNode(value)
+            self.tail = self.head
+        else:
+            node = ListNode(value)
+            node.next = self.head
+            self.head = node
+        self.size += 1
 
     def instert_at_end(self, value: any) -> None:
-        pass
+        if self.head is None:
+            self.head = ListNode(value)
+            self.tail = self.head
+        else:
+            node = ListNode(value)
+            self.tail.next = node
+            self.tail = node
+        self.size += 1
 
     def insert_at_position(self, position: int, value: any) -> ListNode:
         pass

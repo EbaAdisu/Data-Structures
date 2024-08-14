@@ -1,7 +1,7 @@
 from list_node import ListNode
 
 
-class SingleLinkedList:
+class LinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
